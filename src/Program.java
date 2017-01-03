@@ -14,7 +14,8 @@ public class Program {
         System.out.println("Enter a Number: ");
         System.out.println("1: Geeks for Geeks: Perimeter Shapes Formed");
         System.out.println("2: Find Unique Characters");
-        System.out.println("3: Hamming Distance");
+        System.out.println("3: LeetCode: Hamming Distance");
+        System.out.println("4: LeetCode: Disappearing Numbers");
         int input = inScan.nextInt();
 
         Problems p = new Problems();
@@ -25,6 +26,8 @@ public class Program {
             case 2: p.setupfindPerimeter();
                     break;
             case 3: p.setupHammingDistance();
+                    break;
+            case 4: p.setupDisappearingNumbers();
                     break;
         }
 

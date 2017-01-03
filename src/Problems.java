@@ -5,6 +5,8 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Problems {
@@ -143,6 +145,34 @@ public void setupfindPerimeter()
 
     }
 
+    public void setupDisappearingNumbers()
+    {
+        int nums[] = {4,3,2,7,8,2,3,1};
+        List<Integer> myList = findDisappearingNumbers(nums);
+    }
+    public List<Integer> findDisappearingNumbers(int[]nums)
+    {
+        List<Integer> myList = new ArrayList<Integer>();
+
+        char copy[] = new char [nums.length];
+
+        for(int i = 0; i <= copy.length-1; i++)
+    {
+        copy[nums[i]-1] = '*';
+    }
+    int counter = 1;
+        for(char c: copy)
+        {
+            if(c != '*'){
+                System.out.println("Missing: " + counter);
+                myList.add(counter);
+
+            }
+            counter++;
+        }
+        return myList;
+    }
+
 
 
 
@@ -151,6 +181,7 @@ public void setupfindPerimeter()
         String binaryX = String.format("%4s", Integer.toBinaryString(x)).replace(' ', '0');
         String binaryY = String.format("%4s", Integer.toBinaryString(y)).replace(' ', '0');
 
+        /*
         System.out.println(x + " to binary : " +binaryX);
         System.out.println(y + " to binary : " +binaryY);
         int counter = 0;
@@ -159,7 +190,9 @@ public void setupfindPerimeter()
             if(binaryX.charAt(i) != binaryY.charAt(i))
             counter++;
         }
-        System.out.println(counter);
+        */
+
+        System.out.println(Integer.bitCount(x ^ y));
     }
 
 
