@@ -4,6 +4,9 @@
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
+
+import java.util.Scanner;
+
 public class Problems {
 
 public void setupfindPerimeter()
@@ -112,6 +115,15 @@ public void setupfindPerimeter()
 
 
 
+
+
+
+
+
+
+
+
+
     public static void uniqueCharacters(String unique)
     {
         boolean result = false;
@@ -130,5 +142,57 @@ public void setupfindPerimeter()
         }
 
     }
+
+
+
+
+    public void hammingDistance(int x, int y)
+    {
+        String binaryX = String.format("%4s", Integer.toBinaryString(x)).replace(' ', '0');
+        String binaryY = String.format("%4s", Integer.toBinaryString(y)).replace(' ', '0');
+
+        System.out.println(x + " to binary : " +binaryX);
+        System.out.println(y + " to binary : " +binaryY);
+        int counter = 0;
+        for(int i  = 0; i <= binaryX.length()-1; i++)
+        {
+            if(binaryX.charAt(i) != binaryY.charAt(i))
+            counter++;
+        }
+        System.out.println(counter);
+    }
+
+
+
+    public void setupHammingDistance()
+    {
+        Scanner inScan = new Scanner(System.in);
+        System.out.println("Please enter first value:");
+        int x = inScan.nextInt();
+        System.out.println("Please enter second value:");
+        int y = inScan.nextInt();
+        hammingDistance(x,y);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
