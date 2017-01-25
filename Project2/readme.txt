@@ -1,0 +1,1 @@
+This was designed in a more OOP fashion. 
